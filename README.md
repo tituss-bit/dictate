@@ -17,6 +17,17 @@ Whisper large-v3-turbo handles Russian and English (and ~90 other languages) far
 - **Hallucination guard.** Drops the phrases Whisper invents on silence, and ignores presses shorter than 0.4 s.
 - Menu-bar only, ~4 MB binary, one Swift file per concern, no Xcode project needed.
 
+## Performance
+
+Measured on short spoken phrases (a sentence or two), from key release to text on screen:
+
+| Machine | Latency |
+|---|---|
+| MacBook Pro, M5 Max, 128 GB | effectively instant |
+| MacBook Air, M5, 24 GB | about 1–2 s |
+
+The engine loads once at launch (~10 s) and stays resident; the quantized model takes ~1 GB of memory.
+
 ## Requirements
 
 - Apple Silicon Mac (M1 or newer)
